@@ -16,6 +16,6 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		snippets = SnippetType.CAMELCASE
 		)
 
-public class runcucumbertest {
+public class runcucumbeTest {
 
 }
