@@ -42,6 +42,14 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>4.4.0</version>
 		</dependency>
+		<!-- <dependency> <groupId>net.masterthought</groupId> <artifactId>cucumber-reporting</artifactId> 
+			<version>5.6.0</version> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
+		<dependency>
+			<groupId>net.masterthought</groupId>
+			<artifactId>maven-cucumber-reporting</artifactId>
+			<version>5.6.0</version>
+		</dependency>
 
 
 
@@ -72,6 +80,27 @@
 			</plugin>
 
 			<!-- Verify -->
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>3.15.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>gostores-Autometion</projectName>  <!-- Replace with project name -->
+							<outputDirectory>target/cucumber-reports/advanced-reports</outputDirectory>
+							<cucumberOutput>target/cucumber-reports/CucumberTestReport.json</cucumberOutput>
+							<buildNumber>1</buildNumber>
+							<parallelTesting>false</parallelTesting>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
 		</plugins>
 
